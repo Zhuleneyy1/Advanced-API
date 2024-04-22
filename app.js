@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+const bodyParser = require('body-parser');
 const config = require('./src/config.json');
 const routes = require('./src/routes');
 const limiter = require('./src/services/ratelimit');
@@ -12,6 +13,7 @@ logMessage('green', '[INFO] Starting server...');
 const middlewares = () => {
     app.use(cors());
     app.set('trust proxy', 1);
+    app.use(bodyParser.json());
     app.use(limiter);
     app.use(checkIP);
     app.use(checkKey);
