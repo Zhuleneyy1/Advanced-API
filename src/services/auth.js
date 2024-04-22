@@ -23,4 +23,4 @@ const checkIP = async (req, res, next) => {
     }
 }
 
-module.exports = {checkKey, checkIP};
+module.exports = {checkKey, checkIP}

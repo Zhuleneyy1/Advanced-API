@@ -5,7 +5,7 @@ const Log = async (message) => {
         if (err) {
             return console.log(err);
         }
-    });
+    })
 }
 
-module.exports = {Log};
+module.exports = {Log}

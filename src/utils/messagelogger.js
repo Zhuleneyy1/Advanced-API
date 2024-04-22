@@ -13,4 +13,4 @@ const logMessage = (color, message) => {
     }
 }
 
-module.exports = {logMessage};
+module.exports = {logMessage}

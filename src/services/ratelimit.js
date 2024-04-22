@@ -5,6 +5,6 @@ const limiter = rateLimit({
 	max: 100,
 	standardHeaders: true,
 	legacyHeaders: false
-});
+})
 
-module.exports = limiter;
+module.exports = limiter

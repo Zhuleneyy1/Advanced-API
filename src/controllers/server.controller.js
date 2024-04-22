@@ -41,7 +41,7 @@ const editServerData = async (req, res) => {
                 console.log(err);
                 res.status(500).send('Nastala chyba při zpracování dat!');
             }
-        });
+        })
 
     } else {
         res.status(400).send('Nebyla vyplněná data a value!');
@@ -49,4 +49,4 @@ const editServerData = async (req, res) => {
     }
 }
 
-module.exports = {getServerData, editServerData};
+module.exports = {getServerData, editServerData}
