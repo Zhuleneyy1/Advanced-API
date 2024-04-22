@@ -1,0 +1,9 @@
+{
+    "app": {
+        "port": "3000",
+        "apiKey": "9yYoKT38YYjCFGKy"
+    },
+    "addresses": [
+        "::1"
+    ]
+}

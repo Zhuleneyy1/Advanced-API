@@ -1,0 +1,11 @@
+{
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "express-rate-limit": "^7.2.0",
+    "fs": "^0.0.1-security",
+    "memory-cache": "^0.2.0",
+    "morgan": "^1.10.0"
+  }
+}
