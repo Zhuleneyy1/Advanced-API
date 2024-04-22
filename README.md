@@ -17,5 +17,3 @@
 > **:data** is the object, like this: `"status"` - the status field.
 
 > **:value** is the object, like this: `"offline"` - the value of status field.
-
-&copy; VertyCZ
