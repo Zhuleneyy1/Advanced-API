@@ -5,7 +5,7 @@ const checkKey = async (req, res, next) => {
     var apiKey = req.headers['x-api-key'];
     var ipAddress = req.ip;
 
-    if (config.app.apiKey === apiKey) {
+    if (config.app.apiKey !== apiKey) {
         res.status(403).send('Nebyl zadán platný API klíč!');
         Log(`[${ipAddress}] Request attempt failed - invalid API Key!`);
     }
