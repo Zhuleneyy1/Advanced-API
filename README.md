@@ -13,4 +13,5 @@ A very simple Express.js API example for my recruitment for this project.
 > Also, it logging any action, such as invalid request, edit server data, etc.
 
 > **:data** is the object, like this: `"status"` - the status field.
+
 > **:value** is the object, like this: `"offline"` - the value of status field.
