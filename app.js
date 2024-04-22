@@ -7,7 +7,7 @@ const {checkIP, checkKey} = require('./src/services/auth');
 const {logMessage} = require('./src/utils/messagelogger');
 
 const app = express();
-logMessage('green', `[INFO] Probíhá spouštění serveru...`);
+logMessage('green', '[INFO] Probíhá spouštění serveru...');
 
 const middlewares = () => {
     app.use(cors());

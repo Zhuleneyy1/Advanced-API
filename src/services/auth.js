@@ -7,8 +7,8 @@ const checkKey = async (req, res, next) => {
     if (config.app.apiKey === apiKey) {
         return next();
     } else {
-        res.status(403).send('Nebyl zadán API klíč!');
-        Log('Unsuccessful try of check token');
+        res.status(403).send('Nebyl zadán platný API klíč!');
+        Log(`[${ip}] Request attempt failed - invalid API Key!`);
     }
 }
 
@@ -19,7 +19,7 @@ const checkIP = async (req, res, next) => {
         return next();
     } else {
         res.status(403).send('Přístup z této IP adresy není oprávněný!');
-        Log(`[${ip}] Unsuccessful try of check ip`);
+        Log(`[${ip}] Request attempt failed - unauthorized IP address!`);
     }
 }
 
