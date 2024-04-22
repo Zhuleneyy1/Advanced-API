@@ -1,4 +1,0 @@
-[Mon, 22 Apr 2024 15:13:28 GMT] [::1] | Edit server data - status offline -> offline
-[Mon, 22 Apr 2024 15:13:31 GMT] [::1] | Edit server data - status offline -> online
-[Mon, 22 Apr 2024 15:13:35 GMT] [::1] | Edit server data - status online -> offline
-[Mon, 22 Apr 2024 15:16:52 GMT] [::1] | Edit server data - status offline -> offline

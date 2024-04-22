@@ -7,7 +7,7 @@ const {checkIP, checkKey} = require('./src/services/auth');
 const {logMessage} = require('./src/utils/messagelogger');
 
 const app = express();
-logMessage('green', '[INFO] Probíhá spouštění serveru...');
+logMessage('green', '[INFO] Starting server...');
 
 const middlewares = () => {
     app.use(cors());
@@ -21,5 +21,5 @@ const middlewares = () => {
 middlewares();
 
 app.listen(config.app.port, () => {
-    return logMessage('green', `[INFO] Server byl spuštěn na portu ${config.app.port}!`);
+    return logMessage('green', `[INFO] Server has started on port ${config.app.port}!`);
 });

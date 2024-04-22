@@ -4,7 +4,7 @@ const {Log} = require('../services/logger');
 const getServerData = async (req, res) => {
     fs.readFile('./src/server.json', 'utf8', (err, data) => {
         if (err) {
-            res.status(500).send('Nastala chyba při získávání serveru!');
+            res.status(500).send('Nastala chyba při získávání souboru!');
             return;
         }
 
@@ -45,7 +45,7 @@ const editServerData = async (req, res) => {
 
     } else {
         res.status(400).send('Nebyla vyplněná data a value!');
-        Log(`[${ip}] | Error while edit server data - no value and data inserted!`);
+        Log(`[${ip}] | Error while edit server data - no data and value inserted!`);
     }
 }
 
