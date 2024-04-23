@@ -5,7 +5,7 @@ const checkKey = async (req, res, next) => {
     var apiKey = req.headers['x-api-key'];
     var ipAddress = req.ip;
 
-    if (config.app.apiKey === apiKey) {
+    if (apiKey === config.app.key) {
         next();
     } else {
         res.status(403).send('Nebyl zadán platný API klíč!');
@@ -16,7 +16,7 @@ const checkKey = async (req, res, next) => {
 const checkIP = async (req, res, next) => {
     var ipAddress = req.ip;
 
-    if (ipAddress && config.addresses.includes(ipAddress)) {
+    if (config.addresses.includes(ipAddress)) {
         next();
     } else {
         res.status(403).send('Přístup z této IP adresy není oprávněný!');
@@ -24,4 +24,15 @@ const checkIP = async (req, res, next) => {
     }
 }
 
-module.exports = {checkKey, checkIP}
+const checkOrigin = async (req, res, next) => {
+    var origin = req.headers.origin;
+
+    if (config.origins.includes(origin)) {
+        next();
+    } else {
+        res.status(403).send('Přístup z tohoto webu není oprávněný!');
+        Log(`[${origin}] Request attempt failed - unauthorized Origin address!`);
+    }
+}
+
+module.exports = {checkKey, checkIP, checkOrigin}

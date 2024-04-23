@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const config = require('./src/config.json');
 const routes = require('./src/routes');
 const limiter = require('./src/services/ratelimit');
-const {checkIP, checkKey} = require('./src/services/auth');
+const {checkIP, checkKey, checkOrigin} = require('./src/services/auth');
 const {logMessage} = require('./src/utils/messagelogger');
 
 const app = express();
@@ -15,6 +15,7 @@ const middlewares = () => {
     app.set('trust proxy', 1);
     app.use(bodyParser.json());
     app.use(limiter);
+    app.use(checkOrigin);
     app.use(checkIP);
     app.use(checkKey);
     app.use('/', routes);
