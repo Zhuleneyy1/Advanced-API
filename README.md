@@ -7,7 +7,7 @@
 
 ## INSTALLATION
 > You can clone the project within git, insert command `git clone https://github.com/vertycz/tetran-api.git`.
-> With use API with website, ensure you're added the x-api-key to headers in your get/post method in code and you have allowed IP of your web hosting (it can be allowed in file **src/config.json**).
+> With use API with website, ensure you're added the x-api-key to headers in your get/post method in code and you have allowed IP and origin (url address with https/http) of your web hosting (it can be allowed in file **src/config.json**).
 
 ## FUNCTIONS
 > The project is very easy, you can get informations via endpoint `/server`, that returns the JSON object of server info, like status, whitelist, TPS, ram etc., it must be manually edited, via endpoint `/server/edit/:data/:value`.

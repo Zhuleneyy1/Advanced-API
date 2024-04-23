@@ -21,6 +21,7 @@ const checkIP = async (req, res, next) => {
     } else {
         res.status(403).send('Přístup z této IP adresy není oprávněný!');
         Log(`[${ipAddress}] Request attempt failed - unauthorized IP address!`);
+        console.log(ipAddress);
     }
 }
 
@@ -32,6 +33,7 @@ const checkOrigin = async (req, res, next) => {
     } else {
         res.status(403).send('Přístup z tohoto webu není oprávněný!');
         Log(`[${origin}] Request attempt failed - unauthorized Origin address!`);
+        console.log(origin);
     }
 }
 
