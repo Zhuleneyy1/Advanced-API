@@ -1,5 +1,4 @@
 const express = require('express');
-const {checkKey, checkIP} = require('./services/auth');
 
 const routes = express();
 const server = require('./controllers/server.controller');
